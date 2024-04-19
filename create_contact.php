@@ -14,7 +14,7 @@
 -->
 
 <?php
-include("./App/Model/contact.php")
+include('./App/Model/data_owner.php');
 ?>
 
 <html> 

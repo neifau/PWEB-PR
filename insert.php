@@ -1,4 +1,16 @@
-<?php
-require_once 'contact.php';
+<?
+require 'index.php';
+$name = $_POST['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$id = $_POST['id'];
 
-$res = Contact::insert('08888888888', 'Anggun');
+$query_sql = "INSERT INTO akun_user (name, email, password) VALUES ('$name', '$email', '$password')";
+
+if (mysqli_query($koneksi, $query_sql)){
+    header("Location: registrasi.php");
+} else {
+    echo "Pendaftaran Gagal" . mysqli_error($koneksi);
+}
+?>
+
